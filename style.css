@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-Italic-VariableFont_wght.ttf) format(ttf),
+  url(fonts/Montserrat-VariableFont_wght.ttf) format(ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+.mainpage{
+    width: 100%;
+    height: 100vh;
+    background-image: url(photos/backgroundimage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+.mainpage .ticker{
+    background-color:#839D9A;
+    font-weight: 200;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+.mainpage .ticker .tickerwrap .tickermove{
+    display: inline-block;
+    animation: move 20s linear infinite;
+}
+@keyframes move {
+   from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-60%);
+  }
+}
+.mainpage .search{
+    display: flex;
+    justify-content: center;
+}
+.mainpage .search input{
+    margin-top: 1em;
+    width: 60%;
+    height: 3em;
+    border-radius: 40px;
+    border: solid white;
+}
+a{
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: rgb(91, 88, 88);
+}
+header{
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 2fr 2fr;
+    color: rgb(91, 88, 88);
+    background: linear-gradient(to bottom, #D7D7D7, #FFFFFF00);
+    padding-top: 0.5em;
+}
+.leftheaderside, .rightheaderside{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    flex: 1;
+}
+.leftheaderside{
+    margin-left: 3em;
+}
+header .leftheaderside .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header .leftheaderside .menu img{
+    width: 1.5em;
+    height: auto;
+}
+header .leftheaderside .logo img{
+    width: clamp(5em, 10vw, 8em);
+    height: auto;
+}
+header .leftheaderside a:hover, header .rightheaderside a:hover{
+    color: black;
+}
+header .leftheaderside a:hover{
+    text-decoration: underline;
+}
+header .leftheaderside .menu:hover{
+    text-decoration: none;
+}
+
+.rightheaderside{
+    margin-right: 3em;
+    justify-content: end;
+}
+header .rightheaderside .geo, header .rightheaderside .authorization{
+    display: flex;
+    align-items: center; 
+    gap: 0.4em;
+}
+header .rightheaderside a img{
+    width: 1.5em;
+    height: auto;
+}
+header .rightheaderside .vectors{
+    display: flex;
+    margin-right: 3em;
+    gap: 1em;
+    align-items: center;
+}
+@media screen and (max-width: 1038px){
+    header .leftheaderside .items, header .leftheaderside .rooms, header .leftheaderside .design, header .leftheaderside .menu p{
+        display: none;
+    }
+    header .rightheaderside .geo p, header .rightheaderside .authorization p{
+        display: none;
+    }
+    header{
+        display: flex;
+        justify-content: center;
+        gap: 5vw;
+    }
+    header .rightheaderside, header .rightheaderside .vectors{
+        gap: 5vw;
+        margin-right: 0;
+    }
+    header .leftheaderside{
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        margin-left: 1vw;
+    }
+    header .rightheaderside{
+        justify-content: flex-start;
+        margin-right: 1vw;
+    }
+    .mainpage .search input{
+    width: 80%;
+    height: 4em;
+    border-radius: 50px;
+}
+}
