@@ -78,6 +78,17 @@ header{
 .leftheaderside{
     margin-left: 3em;
 }
+
+header .leftheaderside .logo img{
+    width: clamp(5em, 10vw, 8em);
+    height: auto;
+}
+header .leftheaderside .nav-links{
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    list-style: none;
+}
 header .leftheaderside .menu{
     display: flex;
     flex-direction: column;
@@ -88,9 +99,14 @@ header .leftheaderside .menu img{
     width: 1.5em;
     height: auto;
 }
-header .leftheaderside .logo img{
-    width: clamp(5em, 10vw, 8em);
-    height: auto;
+.burger {
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle{
+    display: none;
 }
 header .leftheaderside a:hover, header .rightheaderside a:hover{
     color: black;
@@ -149,5 +165,23 @@ header .rightheaderside .vectors{
     .mainpage .search input{
     width: 80%;
     height: 4em;
-}}
+    }
+    header .leftheaderside .nav-links {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background: #839D9A;
+        top: 60px;
+        
+        width: 10px;
+        padding: 10px;
+    }
+    .burger {
+        display: flex;
+    }
+    /* Когда чекбокс активен — показываем меню */
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}
 
