@@ -94,9 +94,14 @@ header .leftheaderside .menu img{
     width: 1.5em;
     height: auto;
 }
-header .leftheaderside .logo img{
-    width: clamp(5em, 10vw, 8em);
-    height: auto;
+.burger {
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle{
+    display: none;
 }
 header .leftheaderside a:hover, header .rightheaderside a:hover{
     color: black;
@@ -196,4 +201,4 @@ header .rightheaderside .vectors{
     gap: 0;
     }
 }
-
+}
