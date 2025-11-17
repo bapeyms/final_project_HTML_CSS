@@ -78,11 +78,17 @@ header{
 .leftheaderside{
     margin-left: 3em;
 }
-header .leftheaderside .menu{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.navbar .container-fluid {
+    gap: 1.5em;
+}
+
+.navbar-toggler {
+    border: none !important; 
+    outline: none !important; 
+    box-shadow: none !important;
+}
+.navbar-nav .nav-link {
+    margin-right: 1.5em; 
 }
 header .leftheaderside .menu img{
     width: 1.5em;
@@ -110,6 +116,12 @@ header .rightheaderside .geo, header .rightheaderside .authorization{
     display: flex;
     align-items: center; 
     gap: 0.4em;
+    text-decoration: none;
+    color: rgb(91, 88, 88);
+}
+header .rightheaderside .geo p, header .rightheaderside .authorization p{
+    margin: 0;
+    padding: 0;
 }
 header .rightheaderside a img{
     width: 1.5em;
@@ -121,17 +133,40 @@ header .rightheaderside .vectors{
     gap: 1em;
     align-items: center;
 }
-@media screen and (max-width: 1038px){
+.search{
+    margin-bottom: 1.5em;
+}
+.search input {
+    padding-left: 2.5em; 
+    background-image: url('photos/mingcute_search-2-line.svg');
+    background-repeat: no-repeat;
+    background-position: 0.7em center; 
+    background-size: 1.2em; 
+}
+.mainpage h1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 4.5em;
+}
+@media screen and (max-width: 991px){
     header .leftheaderside .items, header .leftheaderside .rooms, header .leftheaderside .design, header .leftheaderside .menu p{
         display: none;
     }
     header .rightheaderside .geo p, header .rightheaderside .authorization p{
         display: none;
     }
+    .navbar .container-fluid {
+    gap: 0.5em;
+    }
+    .offcanvas-body .navbar-nav{
+        margin-left: 0.5em;
+        font-weight: bold;
+        font-size: larger;
+    }
     header{
         display: flex;
         justify-content: center;
-        gap: 5vw;
+        gap: 1.5vw;
     }
     header .rightheaderside, header .rightheaderside .vectors{
         gap: 5vw;
@@ -149,5 +184,16 @@ header .rightheaderside .vectors{
     .mainpage .search input{
     width: 80%;
     height: 4em;
-}}
+    }
+    .mainpage h1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.5em;
+    }
+}
+@media screen and (max-width: 442px){
+    .navbar .container-fluid {
+    gap: 0;
+    }
+}
 

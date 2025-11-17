@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
     <div class="content">
@@ -26,14 +27,27 @@
 
             <header>
                 <div class="leftheaderside">
-                    <a href="" class="menu">
-                        <img src="photos/material-symbols_menu.svg">
-                        <p>Меню</p>
-                    </a>
-                <a href=""><div class="logo"><img src="photos/Union.svg" alt="logo"></div></a>
-                <a href="" class="items">Товари</a>
-                <a href="" class="rooms">Кімнати</a>
-                <a href="" class="design">Дизайн</a>
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#"><img src="photos/Union.svg" alt="logo"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title"><img src="photos/Union.svg" alt="logo"></h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item"><a class="nav-link" href="#">Товари</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Кімнати</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Дизайн</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
 
                 <div class="rightheaderside">
@@ -53,9 +67,15 @@
                 </div>
             </header>
             <form class="search">
-                <input type="search" id="sitesearch">
+                <input type="search" id="sitesearch" placeholder="Пошук">
             </form>
+            <h1>ВСЕ ДЛЯ ДОМУ</h1>
+            <div class="mainpage-content">
+                <button>СТВОРИТИ АКАУНТ ТА ПОЧАТИ!</button>
+            </div>
+            
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
