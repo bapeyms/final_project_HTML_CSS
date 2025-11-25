@@ -152,6 +152,48 @@ header .rightheaderside .vectors{
     text-align: center;
     font-weight: 500;
     font-size: 4.5em;
+    margin-bottom: 0.3em;
+}
+.mainpage .mainpage-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 3.5em;
+    margin-right: 3em;
+}
+.mainpage .mainpage-content .mainpage-content-row1{
+    display: flex;
+    gap: 2em;
+}
+.button1, .button2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainpage .mainpage-content .mainpage-content-row1 .button1{
+    width: auto;
+    height: auto;
+    padding: clamp(0.6em, 1vw, 1em) clamp(1em, 3vw, 2em);
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 5em;
+}
+.mainpage .mainpage-content .mainpage-content-row1 .button1:hover{
+    background-color: rgb(63, 62, 62);
+}
+.mainpage .mainpage-content .mainpage-content-row1 .button2{
+    width: auto;
+    height: auto;
+    padding: clamp(0.6em, 1vw, 1em) clamp(1em, 3vw, 2em);
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border: 3px solid black;
+    border-radius: 5em;
+}
+.mainpage .mainpage-content .mainpage-content-row1 .button2:hover{
+    border-color: rgb(63, 62, 62);
 }
 @media screen and (max-width: 991px){
     header .leftheaderside .items, header .leftheaderside .rooms, header .leftheaderside .design, header .leftheaderside .menu p{
@@ -200,5 +242,4 @@ header .rightheaderside .vectors{
     .navbar .container-fluid {
     gap: 0;
     }
-}
 }
