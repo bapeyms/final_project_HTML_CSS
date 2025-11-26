@@ -26,11 +26,11 @@
     font-weight: 200;
     color: #FFFFFF;
     letter-spacing: 1px;
-    position: relative;
+    position: sticky;
     overflow: hidden;
     white-space: nowrap;
     padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    padding-bottom: 1.7em;
 }
 .mainpage .ticker .tickerwrap .tickermove{
     display: inline-block;
@@ -148,11 +148,11 @@ header .rightheaderside .vectors{
     background-position: 0.7em center; 
     background-size: 1.2em; 
 }
-.mainpage h1{
+.mainpage h3{
     text-align: center;
-    font-weight: 500;
-    font-size: 4.5em;
-    margin-bottom: 0.3em;
+    font-weight: 600;
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
 }
 .mainpage .mainpage-content{
     display: flex;
@@ -164,6 +164,7 @@ header .rightheaderside .vectors{
 .mainpage .mainpage-content .mainpage-content-row1{
     display: flex;
     gap: 2em;
+    margin-bottom: 1.5em;
 }
 .button1, .button2 {
     display: inline-flex;
@@ -194,6 +195,19 @@ header .rightheaderside .vectors{
 }
 .mainpage .mainpage-content .mainpage-content-row1 .button2:hover{
     border-color: rgb(63, 62, 62);
+}
+.mainpage .mainpage-content .mainpage-content-row2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+.mainpage .mainpage-content .mainpage-content-row2 figcaption{
+    background-color: #FFFFFF;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+    width: auto;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 @media screen and (max-width: 991px){
     header .leftheaderside .items, header .leftheaderside .rooms, header .leftheaderside .design, header .leftheaderside .menu p{
@@ -232,11 +246,14 @@ header .rightheaderside .vectors{
     width: 80%;
     height: 4em;
     }
-    .mainpage h1{
+    .mainpage h4{
     text-align: center;
     font-weight: 500;
-    font-size: 2.5em;
+    font-size: 0.5em;
     }
+    .mainpage .mainpage-content .mainpage-content-row2, .mainpage .mainpage-content .mainpage-content-row1{
+        justify-content: center;
+}
 }
 @media screen and (max-width: 442px){
     .navbar .container-fluid {
