@@ -13,7 +13,7 @@
 
 .mainpage{
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     background-image: url(photos/backgroundimage.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,7 +30,7 @@
     overflow: hidden;
     white-space: nowrap;
     padding-top: 0.2em;
-    padding-bottom: 1.7em;
+    padding-bottom: 0.2em;
 }
 .mainpage .ticker .tickerwrap .tickermove{
     display: inline-block;
@@ -170,6 +170,7 @@ header .rightheaderside .vectors{
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 .mainpage .mainpage-content .mainpage-content-row1 .button1{
     width: auto;
@@ -209,6 +210,56 @@ header .rightheaderside .vectors{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+.goods h6{
+    margin-left: 9em;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+.goods .look-for{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    gap: 15px;
+    margin: 0 auto;
+}
+.goods .look-for .two-small-items, .goods .look-for .large-item{
+    border-radius: 15px;
+    background-color: #B6C3C2;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+.goods .look-for .two-small-items img{
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+.goods .look-for .two-small-items p{
+    margin-top: 10px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+.large-item {
+    grid-column: 1 / 3;
+    position: relative;
+    display: flex;
+    padding-right: 3em;
+}
+.large-item img{
+    object-fit: cover;
+    width: 100%;
+}
+.large-item .arrow{
+    width: 40px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-right: 0.4em;
+}
+
+
 @media screen and (max-width: 991px){
     header .leftheaderside .items, header .leftheaderside .rooms, header .leftheaderside .design, header .leftheaderside .menu p{
         display: none;
@@ -246,14 +297,47 @@ header .rightheaderside .vectors{
     width: 80%;
     height: 4em;
     }
-    .mainpage h4{
+    .mainpage h3{
     text-align: center;
-    font-weight: 500;
-    font-size: 0.5em;
+    font-weight: 600;
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+    }
+    .mainpage .mainpage-content .mainpage-content-row1{
+        flex-direction: column;
+        gap: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .mainpage .mainpage-content .mainpage-content-row2 img{
+    width: 22vw;
+    height: auto;
+    }
+    .mainpage .mainpage-content .mainpage-content-row2 figcaption{
+    width: 22vw;
+    height: 8em;
     }
     .mainpage .mainpage-content .mainpage-content-row2, .mainpage .mainpage-content .mainpage-content-row1{
         justify-content: center;
-}
+    }
+    .mainpage .mainpage-content .mainpage-content-row3{
+        text-align: center;
+    }
+    .goods .look-for .two-small-items{
+    font-size: medium;
+    }
+    .goods .look-for .two-small-items img{
+    height: 200px;
+    }
+    .goods h6{
+        text-align: center;
+        margin-left: 0;
+    }
+    .large-item .arrow{
+        width: 25px;
+        height: auto;
+        margin-right: 0.7em;
+    }
 }
 @media screen and (max-width: 442px){
     .navbar .container-fluid {
