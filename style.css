@@ -339,12 +339,13 @@ header .rightheaderside .vectors{
 .catalog{
     width: 85%;
     margin: 0 auto;
-    margin-bottom: 2em;
+    margin-bottom: 2.5em;
+    margin-top: 1em;
 }
 .catalog h6{
     margin-bottom: 1em;
     font-weight: bold;
-    margin-left: 2em;
+    margin-left: 2.5em;
 }
 .products {
     display: grid;
@@ -371,7 +372,7 @@ header .rightheaderside .vectors{
 .ideas{
     margin: 0 auto;
     width: 85%;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 .ideas h6{
     margin-bottom: 1em;
@@ -412,6 +413,22 @@ header .rightheaderside .vectors{
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     z-index: 10;
     cursor: pointer;
+}
+.recs-nav{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0.7em;
+    flex-wrap: wrap;
+}
+.recs-nav li{
+    background-color: #F2F2F2;
+    list-style: none;
+    padding: 0.5em 0.7em 0.5em 0.7em;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 90%;
 }
 @media screen and (max-width: 991px){
     header .leftheaderside .items, header .leftheaderside .rooms, header .leftheaderside .design, header .leftheaderside .menu p{
@@ -500,6 +517,11 @@ header .rightheaderside .vectors{
         place-items: center;     
     }
 }
+@media screen and (max-width: 581px){
+    .recs-nav li{
+        display: none;
+    }
+}
 @media screen and (max-width: 442px){
     .navbar .container-fluid {
     gap: 0;
@@ -507,4 +529,7 @@ header .rightheaderside .vectors{
     .products {
         grid-template-columns: repeat(2, 1fr);
     }
+    .recs-nav{
+    display: none;
+}
 }
