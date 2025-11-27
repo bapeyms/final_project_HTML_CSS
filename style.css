@@ -430,6 +430,36 @@ header .rightheaderside .vectors{
     text-align: center;
     font-size: 90%;
 }
+.important-info{
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 3em;
+}
+.important-info h6{
+    font-weight: bold;
+}
+.important-info .imp-title{
+    margin-bottom: 1em;
+    font-weight: bold;
+    margin-left: 2em;
+}
+.important-info-pic{
+    display: flex;
+    gap: 20px;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+}
+.important-info-pic img{
+    flex: 1 1 0; 
+    height: auto;
+    object-fit: cover;
+}
+.important-info-text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    margin-right: 1.5em;
+}
 @media screen and (max-width: 991px){
     header .leftheaderside .items, header .leftheaderside .rooms, header .leftheaderside .design, header .leftheaderside .menu p{
         display: none;
@@ -499,7 +529,7 @@ header .rightheaderside .vectors{
     .goods .look-for .two-small-items img{
     height: 200px;
     }
-    .goods h6, .sliders h6, .best h6, .new h6, .catalog h6, .ideas h6{
+    .goods h6, .sliders h6, .best h6, .new h6, .catalog h6, .ideas h6, .important-info .imp-title{
         text-align: center;
         margin-left: 0;
     }
@@ -516,6 +546,20 @@ header .rightheaderside .vectors{
         grid-template-columns: repeat(3, 1fr);
         place-items: center;     
     }
+    .important-info-pic{
+    flex-direction: column;
+   }
+   .important-info-pic img{
+    border-radius: 15px;
+   }
+   .important-info-text{
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1em;
+    margin: 0 auto;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+   }
 }
 @media screen and (max-width: 581px){
     .recs-nav li{
